@@ -1,0 +1,60 @@
+robotica@labs:~$ pwd
+/home/robotica
+robotica@labs:~$ mkdir PM_01
+robotica@labs:~$ cd PM_01
+robotica@labs:~/PM_01$ mkdir Practica1
+robotica@labs:~/PM_01$ mkdir Practica2
+robotica@labs:~/PM_01$ mkdir Practica5
+robotica@labs:~/PM_01$ ls
+Practica1  Practica2  Practica5
+robotica@labs:~/PM_01$ cd Practica1
+robotica@labs:~/PM_01/Practica1$ mkdir Arduino
+robotica@labs:~/PM_01/Practica1$ mkdir DIR_1A
+robotica@labs:~/PM_01/Practica1$ touch ArcP1.txt
+robotica@labs:~/PM_01/Practica1$ ls
+ArcP1.txt  Arduino  DIR_1A
+robotica@labs:~/PM_01/Practica1$ cd DIR_1A
+robotica@labs:~/PM_01/Practica1/DIR_1A$ touch Arc1A.txt
+robotica@labs:~/PM_01/Practica1/DIR_1A$ ls
+Arc1A.txt
+robotica@labs:~/PM_01/Practica1/DIR_1A$ cd ../../../
+robotica@labs:~$ cd PM_01
+robotica@labs:~/PM_01$ cd Practica2
+robotica@labs:~/PM_01/Practica2$ mkdir DIR_2A
+robotica@labs:~/PM_01/Practica2$ cd DIR_2A
+robotica@labs:~/PM_01/Practica2/DIR_2A$ mkdir DIR_2AA
+robotica@labs:~/PM_01/Practica2/DIR_2A$ mkdir DIR_2AB
+robotica@labs:~/PM_01/Practica2/DIR_2A$ touch Arc2A
+robotica@labs:~/PM_01/Practica2/DIR_2A$ cd ../../
+robotica@labs:~/PM_01$ cd Practica5
+robotica@labs:~/PM_01/Practica5$ mkdir DIR_5A
+robotica@labs:~/PM_01/Practica5$ cd DIR_5A
+robotica@labs:~/PM_01/Practica5/DIR_5A$ mkdir DIR_2AA
+robotica@labs:~/PM_01/Practica5/DIR_5A$ touch Arc5A.txt
+robotica@labs:~/PM_01/Practica5/DIR_5A$ ls
+Arc5A.txt  DIR_2AA
+robotica@labs:~/PM_01/Practica5/DIR_5A$ cd ../../
+robotica@labs:~/PM_01$ cd Practica2/DIR_2A
+robotica@labs:~/PM_01/Practica2/DIR_2A$ rm Arc2A.txt
+rm: cannot remove 'Arc2A.txt': No such file or directory
+robotica@labs:~/PM_01/Practica2/DIR_2A$ rm Arc2A
+robotica@labs:~/PM_01/Practica2/DIR_2A$ rm DIR_2AB
+rm: cannot remove 'DIR_2AB': Is a directory
+robotica@labs:~/PM_01/Practica2/DIR_2A$ rmdir DIR_2AB
+robotica@labs:~/PM_01/Practica2/DIR_2A$ ls
+DIR_2AA
+robotica@labs:~/PM_01/Practica2/DIR_2A$ cp -r DIR_2AA Dir_X
+robotica@labs:~/PM_01/Practica2/DIR_2A$ ls
+DIR_2AA  Dir_X
+robotica@labs:~/PM_01/Practica2/DIR_2A$ ../../
+bash: ../../: Is a directory
+robotica@labs:~/PM_01/Practica2/DIR_2A$ cp ../../
+cp: missing destination file operand after '../../'
+Try 'cp --help' for more information.
+robotica@labs:~/PM_01/Practica2/DIR_2A$ cd ../../
+robotica@labs:~/PM_01$ mkdir Practica3
+robotica@labs:~/PM_01$ mkdir Practica4
+robotica@labs:~/PM_01$ ls
+Practica1  Practica2  Practica3  Practica4  Practica5
+robotica@labs:~/PM_01$ 
+
