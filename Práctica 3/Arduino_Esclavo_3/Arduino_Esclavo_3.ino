@@ -51,16 +51,21 @@ void receiveEvent(int howMany){
     Serial.print("Pos X = ");
     Serial.println(posX);
   }
-  
-  voltX=map(posX,-90,90,0,255);
+
+  voltX=map(posX,0,255,-255,255);
   //voltY=map(posY,-90,90,0,255);
   //voltZ=map(posZ,-90,90,0,255);
 
   Serial.print("Volt X = ");
   Serial.println(voltX);
 
-  analogWrite(pin5,voltX);
-  analogWrite(pin6,0);
+  if(voltX > 0){
+    analogWrite(pin5,voltX);
+  }else{
+    voltX = voltX * -1;
+    analogWrite(pin6,voltX);
+  }
+  
 
 }
 

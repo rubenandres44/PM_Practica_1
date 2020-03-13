@@ -15,6 +15,7 @@ int valX;
 
 void setup() {
   pinMode(x,INPUT);
+  pinMode(A0,INPUT);
   //pinMode(y,INPUT);
   //pinMode(z,INPUT);
   
@@ -24,19 +25,22 @@ void setup() {
 
 void loop() {
 
-  valX=analogRead(x);
+  valX=analogRead(A0);
   //valY=analogRead(y);
   //valZ=analogRead(z);
 
   Serial.print("X = ");
   Serial.println(valX);
+  if(valX > 400) valX = 400;
+  if(valX < 270) valX = 270;
   /*
   Serial.print("Y = ");
   Serial.println(valY);
   Serial.print("Z = ");
   Serial.println(valZ);
   */
-  posX=map(valX,360,380,-90,90);//360
+  
+  posX=map(valX,270,400,0,255);//360
   //posY=map(valY,200,400,-90,90);
   //posZ=map(valZ,200,400,-90,90);
   
@@ -50,6 +54,7 @@ void loop() {
   */
   Wire.beginTransmission(1);
   Wire.write(posX);
+  
   //Wire.write(posY);
   //Wire.write(posZ);
   Wire.endTransmission();
